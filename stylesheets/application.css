@@ -2309,7 +2309,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f013 ";
+  content: "\f013&nbsp;";
 }
 /* line 4, ../sass/_icons.scss */
 #top-menu li a.logout:before {
@@ -2319,7 +2319,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f08b ";
+  content: "\f08b&nbsp;";
 }
 /* line 5, ../sass/_icons.scss */
 #top-menu li a.home:before {
@@ -2329,7 +2329,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f015 ";
+  content: "\f015&nbsp;";
 }
 /* line 6, ../sass/_icons.scss */
 #top-menu li a.my-page:before {
@@ -2339,7 +2339,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f007 ";
+  content: "\f007&nbsp;";
 }
 /* line 7, ../sass/_icons.scss */
 #top-menu li a.projects:before {
@@ -2349,7 +2349,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f135 ";
+  content: "\f135&nbsp;";
 }
 /* line 8, ../sass/_icons.scss */
 #top-menu li a.administration:before {
@@ -2359,7 +2359,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f0ad ";
+  content: "\f0ad&nbsp;";
 }
 /* line 9, ../sass/_icons.scss */
 #top-menu li a.help:before {
@@ -2369,7 +2369,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f059 ";
+  content: "\f059&nbsp;";
 }
 /* line 10, ../sass/_icons.scss */
 #top-menu li a.rb-statistics:before {
@@ -2379,7 +2379,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f080 ";
+  content: "\f080&nbsp;";
 }
 
 /* line 13, ../sass/application.scss */
