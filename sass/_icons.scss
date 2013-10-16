@@ -1,12 +1,12 @@
 #top-menu {
   li {
-    a.my-account      { @include icon($cog + ' '); }
-    a.logout          { @include icon($signout + ' '); }
-    a.home:before     { @include icon($home + ' '); }
-    a.my-page:before  { @include icon($user + ' '); }
-    a.projects        { @include icon($rocket + ' '); }
-    a.administration  { @include icon($wrench + ' '); }
-    a.help            { @include icon($question-sign + ' '); }
-    a.rb-statistics   { @include icon($bar-chart + ' '); }
+    a.my-account:before     { @include icon($cog + ' '); }
+    a.logout:before         { @include icon($signout + ' '); }
+    a.home:before           { @include icon($home + ' '); }
+    a.my-page:before        { @include icon($user + ' '); }
+    a.projects:before       { @include icon($rocket + ' '); }
+    a.administration:before { @include icon($wrench + ' '); }
+    a.help:before           { @include icon($question-sign + ' '); }
+    a.rb-statistics:before  { @include icon($bar-chart + ' '); }
   }
 }

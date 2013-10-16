@@ -2302,7 +2302,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
  * @license GPL3 License
  */
 /* line 3, ../sass/_icons.scss */
-#top-menu li a.my-account {
+#top-menu li a.my-account:before {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -2312,7 +2312,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   content: "\f013 ";
 }
 /* line 4, ../sass/_icons.scss */
-#top-menu li a.logout {
+#top-menu li a.logout:before {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -2342,7 +2342,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   content: "\f007 ";
 }
 /* line 7, ../sass/_icons.scss */
-#top-menu li a.projects {
+#top-menu li a.projects:before {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -2352,7 +2352,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   content: "\f135 ";
 }
 /* line 8, ../sass/_icons.scss */
-#top-menu li a.administration {
+#top-menu li a.administration:before {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -2362,7 +2362,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   content: "\f0ad ";
 }
 /* line 9, ../sass/_icons.scss */
-#top-menu li a.help {
+#top-menu li a.help:before {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -2372,7 +2372,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   content: "\f059 ";
 }
 /* line 10, ../sass/_icons.scss */
-#top-menu li a.rb-statistics {
+#top-menu li a.rb-statistics:before {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
