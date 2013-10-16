@@ -1,12 +1,12 @@
 #top-menu {
   li {
-    a.my-account:before     { @include icon($cog + '&nbsp;'); }
-    a.logout:before         { @include icon($signout + '&nbsp;'); }
-    a.home:before           { @include icon($home + '&nbsp;'); }
-    a.my-page:before        { @include icon($user + '&nbsp;'); }
-    a.projects:before       { @include icon($rocket + '&nbsp;'); }
-    a.administration:before { @include icon($wrench + '&nbsp;'); }
-    a.help:before           { @include icon($question-sign + '&nbsp;'); }
-    a.rb-statistics:before  { @include icon($bar-chart + '&nbsp;'); }
+    a.my-account:before     { @include icon($cog + '\00a0'); }
+    a.logout:before         { @include icon($signout + '\00a0'); }
+    a.home:before           { @include icon($home + '\00a0'); }
+    a.my-page:before        { @include icon($user + '\00a0'); }
+    a.projects:before       { @include icon($rocket + '\00a0'); }
+    a.administration:before { @include icon($wrench + '\00a0'); }
+    a.help:before           { @include icon($question-sign + '\00a0'); }
+    a.rb-statistics:before  { @include icon($bar-chart + '\00a0'); }
   }
 }
