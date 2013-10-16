@@ -2302,6 +2302,26 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
  * @license GPL3 License
  */
 /* line 3, ../sass/_icons.scss */
+#top-menu li a.my-account {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f013 ";
+}
+/* line 4, ../sass/_icons.scss */
+#top-menu li a.logout {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f08b ";
+}
+/* line 5, ../sass/_icons.scss */
 #top-menu li a.home:before {
   font-family: FontAwesome;
   font-weight: normal;
@@ -2309,7 +2329,57 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  content: "\f000";
+  content: "\f015 ";
+}
+/* line 6, ../sass/_icons.scss */
+#top-menu li a.my-page:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f007 ";
+}
+/* line 7, ../sass/_icons.scss */
+#top-menu li a.projects {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f135 ";
+}
+/* line 8, ../sass/_icons.scss */
+#top-menu li a.administration {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f0ad ";
+}
+/* line 9, ../sass/_icons.scss */
+#top-menu li a.help {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f059 ";
+}
+/* line 10, ../sass/_icons.scss */
+#top-menu li a.rb-statistics {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f080 ";
 }
 
 /* line 13, ../sass/application.scss */
