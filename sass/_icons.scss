@@ -1,0 +1,7 @@
+#top-menu {
+  li {
+    a.home:before {
+      @include icon($glass);
+    }
+  }
+}

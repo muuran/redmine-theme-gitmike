@@ -1,300 +1,3639 @@
 @import url(../../../stylesheets/application.css);
-/*
+/*!
+ *  Font Awesome 3.2.1
+ *  the iconic font designed for Bootstrap
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - The Font Awesome font is licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Font Awesome documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ *
+ *  Author - Dave Gandy
+ *  ------------------------------------------------------------------------------
+ *  Email: dave@fontawesome.io
+ *  Twitter: http://twitter.com/davegandy
+ *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../plugins/Font-Awesome/font/fontawesome-webfont.eot?v=3.2.1");
+  src: url("../plugins/Font-Awesome/font/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../plugins/Font-Awesome/font/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../plugins/Font-Awesome/font/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../plugins/Font-Awesome/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FONT AWESOME CORE
+ * -------------------------- */
+/* line 5, ../plugins/Font-Awesome/scss/_core.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+
+/* line 10, ../plugins/Font-Awesome/scss/_core.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 17, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.33333em;
+}
+
+/* makes sure icons active on rollover in links */
+/* line 25, ../plugins/Font-Awesome/scss/_core.scss */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline;
+}
+
+/* increased font size for icon-large */
+/* line 33, ../plugins/Font-Awesome/scss/_core.scss */
+[class^="icon-"].icon-fixed-width,
+[class*=" icon-"].icon-fixed-width {
+  display: inline-block;
+  width: 1.14286em;
+  text-align: right;
+  padding-right: 0.28571em;
+}
+/* line 38, ../plugins/Font-Awesome/scss/_core.scss */
+[class^="icon-"].icon-fixed-width.icon-large,
+[class*=" icon-"].icon-fixed-width.icon-large {
+  width: 1.42857em;
+}
+
+/* line 44, ../plugins/Font-Awesome/scss/_core.scss */
+.icons-ul {
+  margin-left: 2.14286em;
+  list-style-type: none;
+}
+/* line 48, ../plugins/Font-Awesome/scss/_core.scss */
+.icons-ul > li {
+  position: relative;
+}
+/* line 50, ../plugins/Font-Awesome/scss/_core.scss */
+.icons-ul .icon-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  text-align: center;
+  line-height: inherit;
+}
+
+/* line 62, ../plugins/Font-Awesome/scss/_core.scss */
+[class^="icon-"].hide,
+[class*=" icon-"].hide {
+  display: none;
+}
+
+/* line 67, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-muted {
+  color: #eeeeee;
+}
+
+/* line 68, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-light {
+  color: white;
+}
+
+/* line 69, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-dark {
+  color: #333333;
+}
+
+/* line 74, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-border {
+  border: solid 1px #eeeeee;
+  padding: .2em .25em .15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 83, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-2x {
+  font-size: 2em;
+}
+/* line 85, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-2x.icon-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 90, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-3x {
+  font-size: 3em;
+}
+/* line 92, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-3x.icon-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 97, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-4x {
+  font-size: 4em;
+}
+/* line 99, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-4x.icon-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 105, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-5x {
+  font-size: 5em;
+}
+/* line 107, ../plugins/Font-Awesome/scss/_core.scss */
+.icon-5x.icon-border {
+  border-width: 5px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+
+/* line 118, ../plugins/Font-Awesome/scss/_core.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 119, ../plugins/Font-Awesome/scss/_core.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 123, ../plugins/Font-Awesome/scss/_core.scss */
+[class^="icon-"].pull-left,
+[class*=" icon-"].pull-left {
+  margin-right: .3em;
+}
+/* line 126, ../plugins/Font-Awesome/scss/_core.scss */
+[class^="icon-"].pull-right,
+[class*=" icon-"].pull-right {
+  margin-left: .3em;
+}
+
+/* BOOTSTRAP SPECIFIC CLASSES
+ * -------------------------- */
+/* Bootstrap 2.0 sprites.less reset */
+/* line 6, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+/* more sprites.less reset */
+/* line 31, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: none;
+}
+
+/* keeps Bootstrap styles with and without icons the same */
+/* line 41, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn [class^="icon-"].icon-large,
+.btn [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large,
+.nav [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+/* line 42, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn [class^="icon-"].icon-spin,
+.btn [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin,
+.nav [class*=" icon-"].icon-spin {
+  display: inline-block;
+}
+
+/* line 48, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.nav-tabs [class^="icon-"], .nav-tabs [class^="icon-"].icon-large,
+.nav-tabs [class*=" icon-"],
+.nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"], .nav-pills [class^="icon-"].icon-large,
+.nav-pills [class*=" icon-"],
+.nav-pills [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+
+/* line 55, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn [class^="icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .18em;
+}
+/* line 57, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large {
+  line-height: .8em;
+}
+
+/* line 64, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .25em;
+}
+
+/* line 70, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn.btn-large [class^="icon-"],
+.btn.btn-large [class*=" icon-"] {
+  margin-top: 0;
+}
+/* line 73, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .05em;
+}
+/* line 75, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+  margin-right: .2em;
+}
+/* line 76, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-left: .2em;
+}
+
+/* Fixes alignment in nav lists */
+/* line 82, ../plugins/Font-Awesome/scss/_bootstrap.scss */
+.nav-list [class^="icon-"],
+.nav-list [class*=" icon-"] {
+  line-height: inherit;
+}
+
+/* EXTRAS
+ * -------------------------- */
+/* Stacked and layered icon */
+/* line 25, ../plugins/Font-Awesome/scss/_mixins.scss */
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: -35%;
+}
+/* line 33, ../plugins/Font-Awesome/scss/_mixins.scss */
+.icon-stack [class^="icon-"],
+.icon-stack [class*=" icon-"] {
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  line-height: inherit;
+  *line-height: 2em;
+}
+/* line 43, ../plugins/Font-Awesome/scss/_mixins.scss */
+.icon-stack .icon-stack-base {
+  font-size: 2em;
+  *line-height: 1em;
+}
+
+/* Animated rotating icon */
+/* line 8, ../plugins/Font-Awesome/scss/_extras.scss */
+.icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+/* Prevent stack and spinners from being taken inline when inside a link */
+/* line 18, ../plugins/Font-Awesome/scss/_extras.scss */
+a .icon-stack,
+a .icon-spin {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@-moz-keyframes spin {
+  /* line 24, ../plugins/Font-Awesome/scss/_extras.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  /* line 25, ../plugins/Font-Awesome/scss/_extras.scss */
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  /* line 28, ../plugins/Font-Awesome/scss/_extras.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 29, ../plugins/Font-Awesome/scss/_extras.scss */
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  /* line 32, ../plugins/Font-Awesome/scss/_extras.scss */
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
+  /* line 33, ../plugins/Font-Awesome/scss/_extras.scss */
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  /* line 36, ../plugins/Font-Awesome/scss/_extras.scss */
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+
+  /* line 37, ../plugins/Font-Awesome/scss/_extras.scss */
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  /* line 40, ../plugins/Font-Awesome/scss/_extras.scss */
+  0% {
+    transform: rotate(0deg);
+  }
+
+  /* line 41, ../plugins/Font-Awesome/scss/_extras.scss */
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+/* Icon rotations and mirroring */
+/* line 45, ../plugins/Font-Awesome/scss/_extras.scss */
+.icon-rotate-90:before {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+/* line 54, ../plugins/Font-Awesome/scss/_extras.scss */
+.icon-rotate-180:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+/* line 63, ../plugins/Font-Awesome/scss/_extras.scss */
+.icon-rotate-270:before {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/* line 72, ../plugins/Font-Awesome/scss/_extras.scss */
+.icon-flip-horizontal:before {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 80, ../plugins/Font-Awesome/scss/_extras.scss */
+.icon-flip-vertical:before {
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* ensure rotation occurs inside anchor tags */
+/* line 91, ../plugins/Font-Awesome/scss/_extras.scss */
+a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, a .icon-flip-horizontal:before, a .icon-flip-vertical:before {
+  display: inline-block;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ * readers do not read off random characters that represent icons */
+/* line 4, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-glass:before {
+  content: "\f000";
+}
+
+/* line 5, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-music:before {
+  content: "\f001";
+}
+
+/* line 6, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-search:before {
+  content: "\f002";
+}
+
+/* line 7, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-envelope-alt:before {
+  content: "\f003";
+}
+
+/* line 8, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-heart:before {
+  content: "\f004";
+}
+
+/* line 9, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-star:before {
+  content: "\f005";
+}
+
+/* line 10, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-star-empty:before {
+  content: "\f006";
+}
+
+/* line 11, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-user:before {
+  content: "\f007";
+}
+
+/* line 12, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-film:before {
+  content: "\f008";
+}
+
+/* line 13, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-th-large:before {
+  content: "\f009";
+}
+
+/* line 14, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-th:before {
+  content: "\f00a";
+}
+
+/* line 15, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-th-list:before {
+  content: "\f00b";
+}
+
+/* line 16, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-ok:before {
+  content: "\f00c";
+}
+
+/* line 17, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-remove:before {
+  content: "\f00d";
+}
+
+/* line 18, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+
+/* line 19, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-zoom-out:before {
+  content: "\f010";
+}
+
+/* line 21, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-power-off:before,
+.icon-off:before {
+  content: "\f011";
+}
+
+/* line 22, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-signal:before {
+  content: "\f012";
+}
+
+/* line 24, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-gear:before,
+.icon-cog:before {
+  content: "\f013";
+}
+
+/* line 25, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-trash:before {
+  content: "\f014";
+}
+
+/* line 26, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-home:before {
+  content: "\f015";
+}
+
+/* line 27, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-file-alt:before {
+  content: "\f016";
+}
+
+/* line 28, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-time:before {
+  content: "\f017";
+}
+
+/* line 29, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-road:before {
+  content: "\f018";
+}
+
+/* line 30, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-download-alt:before {
+  content: "\f019";
+}
+
+/* line 31, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-download:before {
+  content: "\f01a";
+}
+
+/* line 32, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-upload:before {
+  content: "\f01b";
+}
+
+/* line 33, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-inbox:before {
+  content: "\f01c";
+}
+
+/* line 34, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-play-circle:before {
+  content: "\f01d";
+}
+
+/* line 36, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-rotate-right:before,
+.icon-repeat:before {
+  content: "\f01e";
+}
+
+/* line 37, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-refresh:before {
+  content: "\f021";
+}
+
+/* line 38, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-list-alt:before {
+  content: "\f022";
+}
+
+/* line 39, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-lock:before {
+  content: "\f023";
+}
+
+/* line 40, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-flag:before {
+  content: "\f024";
+}
+
+/* line 41, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-headphones:before {
+  content: "\f025";
+}
+
+/* line 42, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-volume-off:before {
+  content: "\f026";
+}
+
+/* line 43, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-volume-down:before {
+  content: "\f027";
+}
+
+/* line 44, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-volume-up:before {
+  content: "\f028";
+}
+
+/* line 45, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-qrcode:before {
+  content: "\f029";
+}
+
+/* line 46, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-barcode:before {
+  content: "\f02a";
+}
+
+/* line 47, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-tag:before {
+  content: "\f02b";
+}
+
+/* line 48, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-tags:before {
+  content: "\f02c";
+}
+
+/* line 49, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-book:before {
+  content: "\f02d";
+}
+
+/* line 50, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bookmark:before {
+  content: "\f02e";
+}
+
+/* line 51, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-print:before {
+  content: "\f02f";
+}
+
+/* line 52, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-camera:before {
+  content: "\f030";
+}
+
+/* line 53, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-font:before {
+  content: "\f031";
+}
+
+/* line 54, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bold:before {
+  content: "\f032";
+}
+
+/* line 55, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-italic:before {
+  content: "\f033";
+}
+
+/* line 56, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-text-height:before {
+  content: "\f034";
+}
+
+/* line 57, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-text-width:before {
+  content: "\f035";
+}
+
+/* line 58, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-align-left:before {
+  content: "\f036";
+}
+
+/* line 59, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-align-center:before {
+  content: "\f037";
+}
+
+/* line 60, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-align-right:before {
+  content: "\f038";
+}
+
+/* line 61, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-align-justify:before {
+  content: "\f039";
+}
+
+/* line 62, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-list:before {
+  content: "\f03a";
+}
+
+/* line 63, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-indent-left:before {
+  content: "\f03b";
+}
+
+/* line 64, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-indent-right:before {
+  content: "\f03c";
+}
+
+/* line 65, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+
+/* line 66, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-picture:before {
+  content: "\f03e";
+}
+
+/* line 67, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-pencil:before {
+  content: "\f040";
+}
+
+/* line 68, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-map-marker:before {
+  content: "\f041";
+}
+
+/* line 69, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-adjust:before {
+  content: "\f042";
+}
+
+/* line 70, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-tint:before {
+  content: "\f043";
+}
+
+/* line 71, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-edit:before {
+  content: "\f044";
+}
+
+/* line 72, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-share:before {
+  content: "\f045";
+}
+
+/* line 73, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-check:before {
+  content: "\f046";
+}
+
+/* line 74, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-move:before {
+  content: "\f047";
+}
+
+/* line 75, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-step-backward:before {
+  content: "\f048";
+}
+
+/* line 76, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-fast-backward:before {
+  content: "\f049";
+}
+
+/* line 77, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-backward:before {
+  content: "\f04a";
+}
+
+/* line 78, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-play:before {
+  content: "\f04b";
+}
+
+/* line 79, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-pause:before {
+  content: "\f04c";
+}
+
+/* line 80, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-stop:before {
+  content: "\f04d";
+}
+
+/* line 81, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-forward:before {
+  content: "\f04e";
+}
+
+/* line 82, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-fast-forward:before {
+  content: "\f050";
+}
+
+/* line 83, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-step-forward:before {
+  content: "\f051";
+}
+
+/* line 84, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-eject:before {
+  content: "\f052";
+}
+
+/* line 85, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+/* line 86, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+/* line 87, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-plus-sign:before {
+  content: "\f055";
+}
+
+/* line 88, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-minus-sign:before {
+  content: "\f056";
+}
+
+/* line 89, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-remove-sign:before {
+  content: "\f057";
+}
+
+/* line 90, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-ok-sign:before {
+  content: "\f058";
+}
+
+/* line 91, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-question-sign:before {
+  content: "\f059";
+}
+
+/* line 92, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-info-sign:before {
+  content: "\f05a";
+}
+
+/* line 93, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-screenshot:before {
+  content: "\f05b";
+}
+
+/* line 94, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+
+/* line 95, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+
+/* line 96, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+
+/* line 97, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+/* line 98, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+/* line 99, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-arrow-up:before {
+  content: "\f062";
+}
+
+/* line 100, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-arrow-down:before {
+  content: "\f063";
+}
+
+/* line 102, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-mail-forward:before,
+.icon-share-alt:before {
+  content: "\f064";
+}
+
+/* line 103, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-resize-full:before {
+  content: "\f065";
+}
+
+/* line 104, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-resize-small:before {
+  content: "\f066";
+}
+
+/* line 105, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-plus:before {
+  content: "\f067";
+}
+
+/* line 106, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-minus:before {
+  content: "\f068";
+}
+
+/* line 107, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+/* line 108, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+
+/* line 109, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-gift:before {
+  content: "\f06b";
+}
+
+/* line 110, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-leaf:before {
+  content: "\f06c";
+}
+
+/* line 111, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-fire:before {
+  content: "\f06d";
+}
+
+/* line 112, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-eye-open:before {
+  content: "\f06e";
+}
+
+/* line 113, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-eye-close:before {
+  content: "\f070";
+}
+
+/* line 114, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-warning-sign:before {
+  content: "\f071";
+}
+
+/* line 115, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-plane:before {
+  content: "\f072";
+}
+
+/* line 116, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-calendar:before {
+  content: "\f073";
+}
+
+/* line 117, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-random:before {
+  content: "\f074";
+}
+
+/* line 118, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-comment:before {
+  content: "\f075";
+}
+
+/* line 119, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-magnet:before {
+  content: "\f076";
+}
+
+/* line 120, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+/* line 121, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+/* line 122, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-retweet:before {
+  content: "\f079";
+}
+
+/* line 123, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+/* line 124, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-folder-close:before {
+  content: "\f07b";
+}
+
+/* line 125, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-folder-open:before {
+  content: "\f07c";
+}
+
+/* line 126, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+
+/* line 127, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+
+/* line 128, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bar-chart:before {
+  content: "\f080";
+}
+
+/* line 129, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+
+/* line 130, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+
+/* line 131, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-camera-retro:before {
+  content: "\f083";
+}
+
+/* line 132, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-key:before {
+  content: "\f084";
+}
+
+/* line 134, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-gears:before,
+.icon-cogs:before {
+  content: "\f085";
+}
+
+/* line 135, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-comments:before {
+  content: "\f086";
+}
+
+/* line 136, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-thumbs-up-alt:before {
+  content: "\f087";
+}
+
+/* line 137, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-thumbs-down-alt:before {
+  content: "\f088";
+}
+
+/* line 138, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-star-half:before {
+  content: "\f089";
+}
+
+/* line 139, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+
+/* line 140, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-signout:before {
+  content: "\f08b";
+}
+
+/* line 141, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+
+/* line 142, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-pushpin:before {
+  content: "\f08d";
+}
+
+/* line 143, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-external-link:before {
+  content: "\f08e";
+}
+
+/* line 144, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-signin:before {
+  content: "\f090";
+}
+
+/* line 145, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-trophy:before {
+  content: "\f091";
+}
+
+/* line 146, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-github-sign:before {
+  content: "\f092";
+}
+
+/* line 147, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-upload-alt:before {
+  content: "\f093";
+}
+
+/* line 148, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-lemon:before {
+  content: "\f094";
+}
+
+/* line 149, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-phone:before {
+  content: "\f095";
+}
+
+/* line 151, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-unchecked:before,
+.icon-check-empty:before {
+  content: "\f096";
+}
+
+/* line 152, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bookmark-empty:before {
+  content: "\f097";
+}
+
+/* line 153, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-phone-sign:before {
+  content: "\f098";
+}
+
+/* line 154, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-twitter:before {
+  content: "\f099";
+}
+
+/* line 155, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+/* line 156, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-github:before {
+  content: "\f09b";
+}
+
+/* line 157, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-unlock:before {
+  content: "\f09c";
+}
+
+/* line 158, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-credit-card:before {
+  content: "\f09d";
+}
+
+/* line 159, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-rss:before {
+  content: "\f09e";
+}
+
+/* line 160, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-hdd:before {
+  content: "\f0a0";
+}
+
+/* line 161, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
+
+/* line 162, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bell:before {
+  content: "\f0a2";
+}
+
+/* line 163, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-certificate:before {
+  content: "\f0a3";
+}
+
+/* line 164, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-hand-right:before {
+  content: "\f0a4";
+}
+
+/* line 165, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-hand-left:before {
+  content: "\f0a5";
+}
+
+/* line 166, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-hand-up:before {
+  content: "\f0a6";
+}
+
+/* line 167, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-hand-down:before {
+  content: "\f0a7";
+}
+
+/* line 168, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-circle-arrow-left:before {
+  content: "\f0a8";
+}
+
+/* line 169, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-circle-arrow-right:before {
+  content: "\f0a9";
+}
+
+/* line 170, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-circle-arrow-up:before {
+  content: "\f0aa";
+}
+
+/* line 171, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-circle-arrow-down:before {
+  content: "\f0ab";
+}
+
+/* line 172, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-globe:before {
+  content: "\f0ac";
+}
+
+/* line 173, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-wrench:before {
+  content: "\f0ad";
+}
+
+/* line 174, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-tasks:before {
+  content: "\f0ae";
+}
+
+/* line 175, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-filter:before {
+  content: "\f0b0";
+}
+
+/* line 176, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+
+/* line 177, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-fullscreen:before {
+  content: "\f0b2";
+}
+
+/* line 178, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-group:before {
+  content: "\f0c0";
+}
+
+/* line 179, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-link:before {
+  content: "\f0c1";
+}
+
+/* line 180, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-cloud:before {
+  content: "\f0c2";
+}
+
+/* line 181, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-beaker:before {
+  content: "\f0c3";
+}
+
+/* line 182, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-cut:before {
+  content: "\f0c4";
+}
+
+/* line 183, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-copy:before {
+  content: "\f0c5";
+}
+
+/* line 185, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-paperclip:before,
+.icon-paper-clip:before {
+  content: "\f0c6";
+}
+
+/* line 186, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-save:before {
+  content: "\f0c7";
+}
+
+/* line 187, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sign-blank:before {
+  content: "\f0c8";
+}
+
+/* line 188, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-reorder:before {
+  content: "\f0c9";
+}
+
+/* line 189, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+
+/* line 190, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-list-ol:before {
+  content: "\f0cb";
+}
+
+/* line 191, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-strikethrough:before {
+  content: "\f0cc";
+}
+
+/* line 192, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-underline:before {
+  content: "\f0cd";
+}
+
+/* line 193, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-table:before {
+  content: "\f0ce";
+}
+
+/* line 194, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-magic:before {
+  content: "\f0d0";
+}
+
+/* line 195, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-truck:before {
+  content: "\f0d1";
+}
+
+/* line 196, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+
+/* line 197, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-pinterest-sign:before {
+  content: "\f0d3";
+}
+
+/* line 198, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-google-plus-sign:before {
+  content: "\f0d4";
+}
+
+/* line 199, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+
+/* line 200, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-money:before {
+  content: "\f0d6";
+}
+
+/* line 201, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+
+/* line 202, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+
+/* line 203, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+
+/* line 204, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-caret-right:before {
+  content: "\f0da";
+}
+
+/* line 205, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-columns:before {
+  content: "\f0db";
+}
+
+/* line 206, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort:before {
+  content: "\f0dc";
+}
+
+/* line 207, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+
+/* line 208, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort-up:before {
+  content: "\f0de";
+}
+
+/* line 209, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-envelope:before {
+  content: "\f0e0";
+}
+
+/* line 210, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+
+/* line 212, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-rotate-left:before,
+.icon-undo:before {
+  content: "\f0e2";
+}
+
+/* line 213, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-legal:before {
+  content: "\f0e3";
+}
+
+/* line 214, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-dashboard:before {
+  content: "\f0e4";
+}
+
+/* line 215, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
+
+/* line 216, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-comments-alt:before {
+  content: "\f0e6";
+}
+
+/* line 217, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bolt:before {
+  content: "\f0e7";
+}
+
+/* line 218, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sitemap:before {
+  content: "\f0e8";
+}
+
+/* line 219, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-umbrella:before {
+  content: "\f0e9";
+}
+
+/* line 220, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-paste:before {
+  content: "\f0ea";
+}
+
+/* line 221, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-lightbulb:before {
+  content: "\f0eb";
+}
+
+/* line 222, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-exchange:before {
+  content: "\f0ec";
+}
+
+/* line 223, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-cloud-download:before {
+  content: "\f0ed";
+}
+
+/* line 224, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-cloud-upload:before {
+  content: "\f0ee";
+}
+
+/* line 225, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-user-md:before {
+  content: "\f0f0";
+}
+
+/* line 226, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-stethoscope:before {
+  content: "\f0f1";
+}
+
+/* line 227, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-suitcase:before {
+  content: "\f0f2";
+}
+
+/* line 228, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bell-alt:before {
+  content: "\f0f3";
+}
+
+/* line 229, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-coffee:before {
+  content: "\f0f4";
+}
+
+/* line 230, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-food:before {
+  content: "\f0f5";
+}
+
+/* line 231, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-file-text-alt:before {
+  content: "\f0f6";
+}
+
+/* line 232, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-building:before {
+  content: "\f0f7";
+}
+
+/* line 233, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-hospital:before {
+  content: "\f0f8";
+}
+
+/* line 234, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-ambulance:before {
+  content: "\f0f9";
+}
+
+/* line 235, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-medkit:before {
+  content: "\f0fa";
+}
+
+/* line 236, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-fighter-jet:before {
+  content: "\f0fb";
+}
+
+/* line 237, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-beer:before {
+  content: "\f0fc";
+}
+
+/* line 238, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-h-sign:before {
+  content: "\f0fd";
+}
+
+/* line 239, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-plus-sign-alt:before {
+  content: "\f0fe";
+}
+
+/* line 240, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-double-angle-left:before {
+  content: "\f100";
+}
+
+/* line 241, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-double-angle-right:before {
+  content: "\f101";
+}
+
+/* line 242, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-double-angle-up:before {
+  content: "\f102";
+}
+
+/* line 243, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-double-angle-down:before {
+  content: "\f103";
+}
+
+/* line 244, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-angle-left:before {
+  content: "\f104";
+}
+
+/* line 245, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+/* line 246, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-angle-up:before {
+  content: "\f106";
+}
+
+/* line 247, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+/* line 248, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-desktop:before {
+  content: "\f108";
+}
+
+/* line 249, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-laptop:before {
+  content: "\f109";
+}
+
+/* line 250, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-tablet:before {
+  content: "\f10a";
+}
+
+/* line 251, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-mobile-phone:before {
+  content: "\f10b";
+}
+
+/* line 252, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-circle-blank:before {
+  content: "\f10c";
+}
+
+/* line 253, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-quote-left:before {
+  content: "\f10d";
+}
+
+/* line 254, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-quote-right:before {
+  content: "\f10e";
+}
+
+/* line 255, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-spinner:before {
+  content: "\f110";
+}
+
+/* line 256, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-circle:before {
+  content: "\f111";
+}
+
+/* line 258, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-mail-reply:before,
+.icon-reply:before {
+  content: "\f112";
+}
+
+/* line 259, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-github-alt:before {
+  content: "\f113";
+}
+
+/* line 260, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-folder-close-alt:before {
+  content: "\f114";
+}
+
+/* line 261, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-folder-open-alt:before {
+  content: "\f115";
+}
+
+/* line 262, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-expand-alt:before {
+  content: "\f116";
+}
+
+/* line 263, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-collapse-alt:before {
+  content: "\f117";
+}
+
+/* line 264, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-smile:before {
+  content: "\f118";
+}
+
+/* line 265, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-frown:before {
+  content: "\f119";
+}
+
+/* line 266, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-meh:before {
+  content: "\f11a";
+}
+
+/* line 267, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-gamepad:before {
+  content: "\f11b";
+}
+
+/* line 268, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-keyboard:before {
+  content: "\f11c";
+}
+
+/* line 269, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-flag-alt:before {
+  content: "\f11d";
+}
+
+/* line 270, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-flag-checkered:before {
+  content: "\f11e";
+}
+
+/* line 271, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-terminal:before {
+  content: "\f120";
+}
+
+/* line 272, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-code:before {
+  content: "\f121";
+}
+
+/* line 273, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-reply-all:before {
+  content: "\f122";
+}
+
+/* line 274, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-mail-reply-all:before {
+  content: "\f122";
+}
+
+/* line 276, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-star-half-full:before,
+.icon-star-half-empty:before {
+  content: "\f123";
+}
+
+/* line 277, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-location-arrow:before {
+  content: "\f124";
+}
+
+/* line 278, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-crop:before {
+  content: "\f125";
+}
+
+/* line 279, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-code-fork:before {
+  content: "\f126";
+}
+
+/* line 280, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-unlink:before {
+  content: "\f127";
+}
+
+/* line 281, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-question:before {
+  content: "\f128";
+}
+
+/* line 282, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-info:before {
+  content: "\f129";
+}
+
+/* line 283, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-exclamation:before {
+  content: "\f12a";
+}
+
+/* line 284, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-superscript:before {
+  content: "\f12b";
+}
+
+/* line 285, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-subscript:before {
+  content: "\f12c";
+}
+
+/* line 286, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-eraser:before {
+  content: "\f12d";
+}
+
+/* line 287, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-puzzle-piece:before {
+  content: "\f12e";
+}
+
+/* line 288, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-microphone:before {
+  content: "\f130";
+}
+
+/* line 289, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-microphone-off:before {
+  content: "\f131";
+}
+
+/* line 290, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-shield:before {
+  content: "\f132";
+}
+
+/* line 291, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-calendar-empty:before {
+  content: "\f133";
+}
+
+/* line 292, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-fire-extinguisher:before {
+  content: "\f134";
+}
+
+/* line 293, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-rocket:before {
+  content: "\f135";
+}
+
+/* line 294, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-maxcdn:before {
+  content: "\f136";
+}
+
+/* line 295, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-chevron-sign-left:before {
+  content: "\f137";
+}
+
+/* line 296, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-chevron-sign-right:before {
+  content: "\f138";
+}
+
+/* line 297, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-chevron-sign-up:before {
+  content: "\f139";
+}
+
+/* line 298, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-chevron-sign-down:before {
+  content: "\f13a";
+}
+
+/* line 299, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-html5:before {
+  content: "\f13b";
+}
+
+/* line 300, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-css3:before {
+  content: "\f13c";
+}
+
+/* line 301, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-anchor:before {
+  content: "\f13d";
+}
+
+/* line 302, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-unlock-alt:before {
+  content: "\f13e";
+}
+
+/* line 303, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bullseye:before {
+  content: "\f140";
+}
+
+/* line 304, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-ellipsis-horizontal:before {
+  content: "\f141";
+}
+
+/* line 305, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-ellipsis-vertical:before {
+  content: "\f142";
+}
+
+/* line 306, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-rss-sign:before {
+  content: "\f143";
+}
+
+/* line 307, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-play-sign:before {
+  content: "\f144";
+}
+
+/* line 308, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-ticket:before {
+  content: "\f145";
+}
+
+/* line 309, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-minus-sign-alt:before {
+  content: "\f146";
+}
+
+/* line 310, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-check-minus:before {
+  content: "\f147";
+}
+
+/* line 311, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-level-up:before {
+  content: "\f148";
+}
+
+/* line 312, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-level-down:before {
+  content: "\f149";
+}
+
+/* line 313, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-check-sign:before {
+  content: "\f14a";
+}
+
+/* line 314, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-edit-sign:before {
+  content: "\f14b";
+}
+
+/* line 315, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-external-link-sign:before {
+  content: "\f14c";
+}
+
+/* line 316, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-share-sign:before {
+  content: "\f14d";
+}
+
+/* line 317, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-compass:before {
+  content: "\f14e";
+}
+
+/* line 318, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-collapse:before {
+  content: "\f150";
+}
+
+/* line 319, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-collapse-top:before {
+  content: "\f151";
+}
+
+/* line 320, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-expand:before {
+  content: "\f152";
+}
+
+/* line 322, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-euro:before,
+.icon-eur:before {
+  content: "\f153";
+}
+
+/* line 323, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-gbp:before {
+  content: "\f154";
+}
+
+/* line 325, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-dollar:before,
+.icon-usd:before {
+  content: "\f155";
+}
+
+/* line 327, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-rupee:before,
+.icon-inr:before {
+  content: "\f156";
+}
+
+/* line 329, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-yen:before,
+.icon-jpy:before {
+  content: "\f157";
+}
+
+/* line 331, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-renminbi:before,
+.icon-cny:before {
+  content: "\f158";
+}
+
+/* line 333, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-won:before,
+.icon-krw:before {
+  content: "\f159";
+}
+
+/* line 335, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bitcoin:before,
+.icon-btc:before {
+  content: "\f15a";
+}
+
+/* line 336, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-file:before {
+  content: "\f15b";
+}
+
+/* line 337, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-file-text:before {
+  content: "\f15c";
+}
+
+/* line 338, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort-by-alphabet:before {
+  content: "\f15d";
+}
+
+/* line 339, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort-by-alphabet-alt:before {
+  content: "\f15e";
+}
+
+/* line 340, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort-by-attributes:before {
+  content: "\f160";
+}
+
+/* line 341, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort-by-attributes-alt:before {
+  content: "\f161";
+}
+
+/* line 342, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort-by-order:before {
+  content: "\f162";
+}
+
+/* line 343, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sort-by-order-alt:before {
+  content: "\f163";
+}
+
+/* line 344, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-thumbs-up:before {
+  content: "\f164";
+}
+
+/* line 345, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-thumbs-down:before {
+  content: "\f165";
+}
+
+/* line 346, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-youtube-sign:before {
+  content: "\f166";
+}
+
+/* line 347, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-youtube:before {
+  content: "\f167";
+}
+
+/* line 348, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-xing:before {
+  content: "\f168";
+}
+
+/* line 349, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-xing-sign:before {
+  content: "\f169";
+}
+
+/* line 350, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-youtube-play:before {
+  content: "\f16a";
+}
+
+/* line 351, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-dropbox:before {
+  content: "\f16b";
+}
+
+/* line 352, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-stackexchange:before {
+  content: "\f16c";
+}
+
+/* line 353, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-instagram:before {
+  content: "\f16d";
+}
+
+/* line 354, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-flickr:before {
+  content: "\f16e";
+}
+
+/* line 355, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-adn:before {
+  content: "\f170";
+}
+
+/* line 356, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bitbucket:before {
+  content: "\f171";
+}
+
+/* line 357, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bitbucket-sign:before {
+  content: "\f172";
+}
+
+/* line 358, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-tumblr:before {
+  content: "\f173";
+}
+
+/* line 359, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-tumblr-sign:before {
+  content: "\f174";
+}
+
+/* line 360, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-long-arrow-down:before {
+  content: "\f175";
+}
+
+/* line 361, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-long-arrow-up:before {
+  content: "\f176";
+}
+
+/* line 362, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-long-arrow-left:before {
+  content: "\f177";
+}
+
+/* line 363, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-long-arrow-right:before {
+  content: "\f178";
+}
+
+/* line 364, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-apple:before {
+  content: "\f179";
+}
+
+/* line 365, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-windows:before {
+  content: "\f17a";
+}
+
+/* line 366, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-android:before {
+  content: "\f17b";
+}
+
+/* line 367, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-linux:before {
+  content: "\f17c";
+}
+
+/* line 368, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-dribbble:before {
+  content: "\f17d";
+}
+
+/* line 369, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-skype:before {
+  content: "\f17e";
+}
+
+/* line 370, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-foursquare:before {
+  content: "\f180";
+}
+
+/* line 371, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-trello:before {
+  content: "\f181";
+}
+
+/* line 372, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-female:before {
+  content: "\f182";
+}
+
+/* line 373, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-male:before {
+  content: "\f183";
+}
+
+/* line 374, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-gittip:before {
+  content: "\f184";
+}
+
+/* line 375, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-sun:before {
+  content: "\f185";
+}
+
+/* line 376, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-moon:before {
+  content: "\f186";
+}
+
+/* line 377, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-archive:before {
+  content: "\f187";
+}
+
+/* line 378, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-bug:before {
+  content: "\f188";
+}
+
+/* line 379, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-vk:before {
+  content: "\f189";
+}
+
+/* line 380, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-weibo:before {
+  content: "\f18a";
+}
+
+/* line 381, ../plugins/Font-Awesome/scss/_icons.scss */
+.icon-renren:before {
+  content: "\f18b";
+}
+
+/*!
  * gitmike
  * This is github-like theme for Redmine.
  * It is based on A1 theme version 1.0.3 by Kirill Bezrukov www.redminecrm.com.
  * @see https://github.com/makotokw/redmine-theme-gitmike
  * @license GPL3 License
  */
-body { color: #333333; background-color: #fff; line-height: 1.4; }
+/* line 3, ../sass/_icons.scss */
+#top-menu li a.home:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f000";
+}
 
-#header { font: 13px Helvetica, arial, freesans, clean, sans-serif; background: #fff; padding: 4px 8px 10px 6px; height: auto; }
-#header a { color: #4183c4; }
-#header > h1 { background: url(../images/logo.png) no-repeat 10px 7px; padding: 5px 50px; color: #393939; }
+/* line 13, ../sass/application.scss */
+body {
+  color: #333333;
+  background-color: #fff;
+  line-height: 1.4;
+}
 
-#main { background: transparent; margin: 15px 15px 0px 15px; background-color: #fff; }
+/* line 19, ../sass/application.scss */
+#header {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif;
+  background: #fff;
+  padding: 4px 8px 10px 6px;
+  height: auto;
+}
+/* line 24, ../sass/application.scss */
+#header a {
+  color: #4183c4;
+}
+/* line 27, ../sass/application.scss */
+#header > h1 {
+  background: url(../images/logo.png) no-repeat 10px 7px;
+  padding: 5px 50px;
+  color: #393939;
+}
 
-#top-menu { font: 13px Helvetica, arial, freesans, clean, sans-serif; padding: 10px 10px 2px 20px; background-color: #f3f3f3; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #f3f3f3)); background-image: -webkit-linear-gradient(#f9f9f9, #f3f3f3); background-image: -moz-linear-gradient(#f9f9f9, #f3f3f3); background-image: -o-linear-gradient(#f9f9f9, #f3f3f3); background-image: linear-gradient(#f9f9f9, #f3f3f3); background-repeat: repeat-x; text-shadow: 0 1px 0 white; border-bottom: 1px solid #e5e5e5; }
-#top-menu #loggedas { color: #222; }
-#top-menu a { color: #333; font-weight: bold; padding: 5px; margin-right: 0px; -webkit-transition: color 0.15s ease-in 0; -moz-transition: color 0.15s ease-in 0; -o-transition: color 0.15s ease-in 0; transition: color 0.15s ease-in 0; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
-#top-menu a:hover { color: #4183c4; text-decoration: none; }
+/* line 34, ../sass/application.scss */
+#main {
+  background: transparent;
+  margin: 15px 15px 0px 15px;
+  background-color: #fff;
+}
 
-div.flash { border: 1px solid; text-shadow: 0 1px white; }
-div#content > div.flash { border: 0px solid; padding: 9px 35px 10px; margin: -5px -10px 1px -10px; background-position-x: 12px !important; background-position-y: 9px !important; position: relative; border-bottom: 1px solid #AECCD7; }
-div#content > div.flash:first-child { -webkit-border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; -moz-border-radius-topright: 8px; border-top-right-radius: 8px; }
+/* line 40, ../sass/application.scss */
+#top-menu {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif;
+  padding: 10px 10px 2px 20px;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(#f9f9f9, #f3f3f3);
+  background-image: -moz-linear-gradient(#f9f9f9, #f3f3f3);
+  background-image: -o-linear-gradient(#f9f9f9, #f3f3f3);
+  background-image: linear-gradient(#f9f9f9, #f3f3f3);
+  background-repeat: repeat-x;
+  text-shadow: 0 1px 0 white;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 49, ../sass/application.scss */
+#top-menu #loggedas {
+  color: #222;
+}
+/* line 52, ../sass/application.scss */
+#top-menu a {
+  color: #333;
+  font-weight: bold;
+  padding: 5px;
+  margin-right: 0px;
+  -webkit-transition: color 0.15s ease-in 0;
+  -moz-transition: color 0.15s ease-in 0;
+  -o-transition: color 0.15s ease-in 0;
+  transition: color 0.15s ease-in 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+/* line 60, ../sass/application.scss */
+#top-menu a:hover {
+  color: #4183c4;
+  text-decoration: none;
+}
 
-#errorExplanation, div.flash, .nodata, .warning, .conflict { padding: 8px 35px 8px 14px; margin-bottom: 20px; font-size: 1.1em; border: 1px solid; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+/* line 68, ../sass/application.scss */
+div.flash {
+  border: 1px solid;
+  text-shadow: 0 1px white;
+}
+/* line 72, ../sass/application.scss */
+div#content > div.flash {
+  border: 0px solid;
+  padding: 9px 35px 10px;
+  margin: -5px -10px 1px -10px;
+  background-position-x: 12px !important;
+  background-position-y: 9px !important;
+  position: relative;
+  border-bottom: 1px solid #AECCD7;
+}
+/* line 73, ../sass/application.scss */
+div#content > div.flash:first-child {
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
 
-#errorExplanation, .nodata, .warning { background-color: #fcf8e3; border: 1px solid #fbeed5; color: #c09853; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+/* line 87, ../sass/application.scss */
+#errorExplanation, div.flash, .nodata, .warning, .conflict {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  border: 1px solid;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
 
-div.filters h2 .scope_title a { color: #444; }
-div#content { margin-right: 300px; width: auto; }
-div#main.nosidebar div#content { margin-right: 0px; }
+/* line 95, ../sass/application.scss */
+#errorExplanation, .nodata, .warning {
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  color: #c09853;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
 
-#sidebar { width: 260px !important; padding: 0px 10px 20px 15px !important; background: whiteSmoke; border: 1px solid #ddd; zoom: 1; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); }
+/* line 103, ../sass/application.scss */
+div.filters h2 .scope_title a {
+  color: #444;
+}
+/* line 106, ../sass/application.scss */
+div#content {
+  margin-right: 300px;
+  width: auto;
+}
+/* line 110, ../sass/application.scss */
+div#main.nosidebar div#content {
+  margin-right: 0px;
+}
 
-div#content > h2, div#content h2.contacts_header { border-bottom: 1px solid #d8e6ec; background: #E6F1F6; text-shadow: 0px 1px white; -webkit-border-top-left-radius: 2px; -moz-border-radius-topleft: 2px; border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px; -moz-border-radius-topright: 2px; border-top-right-radius: 2px; padding: 8px 20px; margin: -6px -10px 10px; }
-div#content > div.filters h2, div#content > #add-news > h2, div#content > #add-message > h2, div#content > #add-document > h2 { border-bottom: 1px solid #C5D5DD; background: #E6F1F6; text-shadow: 0px 1px white; -webkit-border-top-left-radius: 4px; -moz-border-radius-topleft: 4px; border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topright: 4px; border-top-right-radius: 4px; padding: 8px 20px; margin: -6px -10px 10px; }
+/* line 115, ../sass/application.scss */
+#sidebar {
+  width: 260px !important;
+  padding: 0px 10px 20px 15px !important;
+  background: whiteSmoke;
+  border: 1px solid #ddd;
+  zoom: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+}
 
-.controller-boards.action-index #add-message { position: static; }
-.controller-boards.action-index #add-message #message-form > p { position: relative; padding: 10px; background-color: white; margin: -10px; border-bottom: 1px solid #AECCD7; }
+/* line 127, ../sass/application.scss */
+div#content > h2, div#content h2.contacts_header {
+  border-bottom: 1px solid #d8e6ec;
+  background: #E6F1F6;
+  text-shadow: 0px 1px white;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  border-top-right-radius: 2px;
+  padding: 8px 20px;
+  margin: -6px -10px 10px;
+}
+/* line 137, ../sass/application.scss */
+div#content > div.filters h2, div#content > #add-news > h2, div#content > #add-message > h2, div#content > #add-document > h2 {
+  border-bottom: 1px solid #C5D5DD;
+  background: #E6F1F6;
+  text-shadow: 0px 1px white;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  padding: 8px 20px;
+  margin: -6px -10px 10px;
+}
 
-.controller-timelog.action-index div#content h2, .controller-time_entry_reports.action-report div#content h2, .controller-boards.action-show div#content h2, .controller-messages.action-show div#content h2, .controller-boards.action-show div#content div#add-message h2 { -webkit-border-top-left-radius: 0px; -moz-border-radius-topleft: 0px; border-top-left-radius: 0px; -webkit-border-top-right-radius: 0px; -moz-border-radius-topright: 0px; border-top-right-radius: 0px; border-top: 1px solid #AECCD7; /*padding: 9px 20px 12px;*/ margin: -2px -10px 10px; }
+/* line 149, ../sass/application.scss */
+.controller-boards.action-index #add-message {
+  position: static;
+}
+/* line 151, ../sass/application.scss */
+.controller-boards.action-index #add-message #message-form > p {
+  position: relative;
+  padding: 10px;
+  background-color: white;
+  margin: -10px;
+  border-bottom: 1px solid #AECCD7;
+}
 
-.controller-timelog.action-index div#content .contextual, .controller-time_entry_reports.action-report div#content .contextual { margin-top: 50px; }
+/* line 161, ../sass/application.scss */
+.controller-timelog.action-index div#content h2, .controller-time_entry_reports.action-report div#content h2, .controller-boards.action-show div#content h2, .controller-messages.action-show div#content h2, .controller-boards.action-show div#content div#add-message h2 {
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  border-top-right-radius: 0px;
+  border-top: 1px solid #AECCD7;
+  /*padding: 9px 20px 12px;*/
+  margin: -2px -10px 10px;
+}
 
-#add-news, #add-message, #add-document { margin-bottom: 20px; }
+/* line 169, ../sass/application.scss */
+.controller-timelog.action-index div#content .contextual, .controller-time_entry_reports.action-report div#content .contextual {
+  margin-top: 50px;
+}
 
-div#content h2.contacts_header { padding-bottom: 10px; /* white-space: nowrap;*/ }
+/* line 173, ../sass/application.scss */
+#add-news, #add-message, #add-document {
+  margin-bottom: 20px;
+}
 
-p.breadcrumb { margin: 4px 0 15px 0; }
+/* line 177, ../sass/application.scss */
+div#content h2.contacts_header {
+  padding-bottom: 10px;
+  /* white-space: nowrap;*/
+}
 
-div#content > div.contextual { margin-top: 10px; margin-right: 10px; }
+/* line 182, ../sass/application.scss */
+p.breadcrumb {
+  margin: 4px 0 15px 0;
+}
 
-#roadmap { margin: 10px; }
+/* line 186, ../sass/application.scss */
+div#content > div.contextual {
+  margin-top: 10px;
+  margin-right: 10px;
+}
 
-p.subtitle { margin: 0px 0 12px 0; }
+/* line 191, ../sass/application.scss */
+#roadmap {
+  margin: 10px;
+}
 
-.contextual a { color: #888; }
-.contextual a:link, .contextual a:visited { color: #888; }
-.contextual a:hover, .contextual a:visited:hover { color: #333; }
+/* line 195, ../sass/application.scss */
+p.subtitle {
+  margin: 0px 0 12px 0;
+}
 
-div.filters h2 .scope_title a { color: #222; text-decoration: none; }
+/* line 199, ../sass/application.scss */
+.contextual a {
+  color: #888;
+}
+/* line 201, ../sass/application.scss */
+.contextual a:link, .contextual a:visited {
+  color: #888;
+}
+/* line 204, ../sass/application.scss */
+.contextual a:hover, .contextual a:visited:hover {
+  color: #333;
+}
 
-.wiki h1 { font-size: 28px; }
+/* line 209, ../sass/application.scss */
+div.filters h2 .scope_title a {
+  color: #222;
+  text-decoration: none;
+}
 
-h2, .wiki h1, h3, .wiki h2 { color: #222; }
+/* line 214, ../sass/application.scss */
+.wiki h1 {
+  font-size: 28px;
+}
 
-div#content > div.wiki { padding: 10px; padding-top: 20px; }
+/* line 218, ../sass/application.scss */
+h2, .wiki h1, h3, .wiki h2 {
+  color: #222;
+}
 
-#header { padding-top: 10px; padding-left: 10px; background-position-y: 11%; }
+/* line 222, ../sass/application.scss */
+div#content > div.wiki {
+  padding: 10px;
+  padding-top: 20px;
+}
 
-div#welcome-store-content h1, div#welcome-store-content h2, div#welcome-store-content h3, div#welcome-store-content h4 { color: #222; }
+/* line 227, ../sass/application.scss */
+#header {
+  padding-top: 10px;
+  padding-left: 10px;
+  background-position-y: 11%;
+}
 
-#content, #main.nosidebar #content { background: #fff; border: 1px solid #ddd; -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+/* line 234, ../sass/application.scss */
+div#welcome-store-content h1, div#welcome-store-content h2, div#welcome-store-content h3, div#welcome-store-content h4 {
+  color: #222;
+}
 
-a { color: #4183c4; }
-a:link, a:visited { color: #4183c4; }
+/* line 239, ../sass/application.scss */
+#content, #main.nosidebar #content {
+  background: #fff;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
 
-div.issue { background: #FFD; padding: 20px; margin-bottom: 6px; border: 1px solid #ddd; margin: -11px -11px 15px -11px; }
-div.issue.tooltip { padding: 6px; margin: 0 0 6px 0; }
-div.contact.details, div.deal.details { padding: 15px !important; margin: -11px -11px 6px; }
+/* line 246, ../sass/application.scss */
+a {
+  color: #4183c4;
+}
+/* line 250, ../sass/application.scss */
+a:link, a:visited {
+  color: #4183c4;
+}
 
-#sidebar h3 { color: #222; }
+/* line 256, ../sass/application.scss */
+div.issue {
+  background: #FFD;
+  padding: 20px;
+  margin-bottom: 6px;
+  border: 1px solid #ddd;
+  margin: -11px -11px 15px -11px;
+}
+/* line 262, ../sass/application.scss */
+div.issue.tooltip {
+  padding: 6px;
+  margin: 0 0 6px 0;
+}
+/* line 267, ../sass/application.scss */
+div.contact.details, div.deal.details {
+  padding: 15px !important;
+  margin: -11px -11px 6px;
+}
 
-#footer { background-color: #F8F8F8; border: 0px; border-top: 1px solid #E0E0E0; color: #636363; margin-top: 45px; padding: 15px; }
-#footer .bgl .bgr:after { content: " and gitmike theme"; }
+/* line 273, ../sass/application.scss */
+#sidebar h3 {
+  color: #222;
+}
 
-h2, h3, h4 { border-bottom: 0px; }
+/* line 277, ../sass/application.scss */
+#footer {
+  background-color: #F8F8F8;
+  border: 0px;
+  border-top: 1px solid #E0E0E0;
+  color: #636363;
+  margin-top: 45px;
+  padding: 15px;
+}
+/* line 287, ../sass/application.scss */
+#footer .bgl .bgr:after {
+  content: " and gitmike theme";
+}
 
-.wiki h1, .wiki h2, .wiki h3 { border-bottom: 0px; }
-.wiki.wiki-page h1 { border-bottom: 1px solid #ccc; }
-.wiki.wiki-page > h2 { border-bottom: 1px solid #ccc; padding-bottom: 6px; }
+/* line 296, ../sass/application.scss */
+h2, h3, h4 {
+  border-bottom: 0px;
+}
 
-#main-menu { left: 0px; width: 100%; background: #FAFAFA; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #eaeaea)); background: -webkit-linear-gradient(top, #fafafa, #eaeaea); background: -moz-linear-gradient(top, #fafafa, #eaeaea); background: -o-linear-gradient(top, #fafafa, #eaeaea); background: linear-gradient(top, #fafafa, #eaeaea); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eaeaea')"; border: 1px solid #EAEAEA; border-bottom-color: #CACACA; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; margin-right: 0; position: relative; }
-#main-menu ul { *zoom: 1; margin-top: 0; padding-left: 0; background-color: transparent !important; }
-#main-menu ul:before, #main-menu ul:after { display: table; content: ""; line-height: 0; }
-#main-menu ul:after { clear: both; }
-#main-menu ul li { margin: 0; padding: 0; }
-#main-menu ul li a { background-color: transparent !important; display: block; float: left; padding: 10px 12px; color: #333; text-shadow: 0 1px 0 white; font-weight: bold; text-decoration: none; border-bottom: 2px solid #DADADA; height: 20px; line-height: 20px; }
-#main-menu ul li a.selected { color: #000; border-bottom: 2px solid #D26911 !important; background-color: #ebebeb; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(100%, #ebebeb)); background-image: -webkit-linear-gradient(#fcfcfc, #ebebeb); background-image: -moz-linear-gradient(#fcfcfc, #ebebeb); background-image: -o-linear-gradient(#fcfcfc, #ebebeb); background-image: linear-gradient(#fcfcfc, #ebebeb); background-repeat: repeat-x; }
-#main-menu ul li a.selected:hover { color: #000; }
-#main-menu ul li a:hover { color: #4183c4; border-bottom: 2px solid #CFDCE8; background-color: #dce6ef; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafbfd), color-stop(100%, #dce6ef)); background-image: -webkit-linear-gradient(#fafbfd, #dce6ef); background-image: -moz-linear-gradient(#fafbfd, #dce6ef); background-image: -o-linear-gradient(#fafbfd, #dce6ef); background-image: linear-gradient(#fafbfd, #dce6ef); background-repeat: repeat-x; text-decoration: underline; }
+/* line 301, ../sass/application.scss */
+.wiki h1, .wiki h2, .wiki h3 {
+  border-bottom: 0px;
+}
+/* line 305, ../sass/application.scss */
+.wiki.wiki-page h1 {
+  border-bottom: 1px solid #ccc;
+}
+/* line 308, ../sass/application.scss */
+.wiki.wiki-page > h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+}
 
-table.list tbody td, table.list tbody tr:hover td { border: solid 1px #ddd; }
-table.list thead th { border-width: 1px; border-style: solid; border-top-color: #ddd; border-right-color: #ddd; border-left-color: #ddd; border-bottom-color: #ddd; }
+/* line 317, ../sass/application.scss */
+#main-menu {
+  left: 0px;
+  width: 100%;
+  background: #FAFAFA;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #eaeaea));
+  background: -webkit-linear-gradient(top, #fafafa, #eaeaea);
+  background: -moz-linear-gradient(top, #fafafa, #eaeaea);
+  background: -o-linear-gradient(top, #fafafa, #eaeaea);
+  background: linear-gradient(top, #fafafa, #eaeaea);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eaeaea')";
+  border: 1px solid #EAEAEA;
+  border-bottom-color: #CACACA;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 0;
+  position: relative;
+}
+/* line 332, ../sass/application.scss */
+#main-menu ul {
+  *zoom: 1;
+  margin-top: 0;
+  padding-left: 0;
+  background-color: transparent !important;
+}
+/* line 15, ../sass/_mixins.scss */
+#main-menu ul:before, #main-menu ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/_mixins.scss */
+#main-menu ul:after {
+  clear: both;
+}
+/* line 341, ../sass/application.scss */
+#main-menu ul li {
+  margin: 0;
+  padding: 0;
+}
+/* line 345, ../sass/application.scss */
+#main-menu ul li a {
+  background-color: transparent !important;
+  display: block;
+  float: left;
+  padding: 10px 12px;
+  color: #333;
+  text-shadow: 0 1px 0 white;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #DADADA;
+  height: 20px;
+  line-height: 20px;
+}
+/* line 358, ../sass/application.scss */
+#main-menu ul li a.selected {
+  color: #000;
+  border-bottom: 2px solid #D26911 !important;
+  background-color: #ebebeb;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(100%, #ebebeb));
+  background-image: -webkit-linear-gradient(#fcfcfc, #ebebeb);
+  background-image: -moz-linear-gradient(#fcfcfc, #ebebeb);
+  background-image: -o-linear-gradient(#fcfcfc, #ebebeb);
+  background-image: linear-gradient(#fcfcfc, #ebebeb);
+  background-repeat: repeat-x;
+}
+/* line 364, ../sass/application.scss */
+#main-menu ul li a.selected:hover {
+  color: #000;
+}
+/* line 368, ../sass/application.scss */
+#main-menu ul li a:hover {
+  color: #4183c4;
+  border-bottom: 2px solid #CFDCE8;
+  background-color: #dce6ef;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafbfd), color-stop(100%, #dce6ef));
+  background-image: -webkit-linear-gradient(#fafbfd, #dce6ef);
+  background-image: -moz-linear-gradient(#fafbfd, #dce6ef);
+  background-image: -o-linear-gradient(#fafbfd, #dce6ef);
+  background-image: linear-gradient(#fafbfd, #dce6ef);
+  background-repeat: repeat-x;
+  text-decoration: underline;
+}
 
-.tabular label { padding-top: 4px; }
+/* line 5, ../sass/_tables.scss */
+table.list tbody td, table.list tbody tr:hover td {
+  border: solid 1px #ddd;
+}
+/* line 9, ../sass/_tables.scss */
+table.list thead th {
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #ddd;
+  border-right-color: #ddd;
+  border-left-color: #ddd;
+  border-bottom-color: #ddd;
+}
 
-tr.assigned-to-me td.assigned_to, tr.created-by-me td.author { font-weight: bold; }
+/* line 19, ../sass/_tables.scss */
+.tabular label {
+  padding-top: 4px;
+}
 
-#quick-search { margin-top: 8px; }
+/* line 24, ../sass/_tables.scss */
+tr.assigned-to-me td.assigned_to,
+tr.created-by-me td.author {
+  font-weight: bold;
+}
 
-table.list td { padding: 4px; }
-table.list input[type="checkbox"] { margin-top: 6px; }
-table.list tbody tr.group span.count { padding: 0 9px 1px 9px; -webkit-border-radius: 9px; -moz-border-radius: 9px; border-radius: 9px; background-color: #999999; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); font-weight: bold; font-size: 11.844px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 14px; }
-table.list tbody tr:hover { background-color: #EFF5F8; }
-table.list tr.issue a { color: #666; }
+/* line 30, ../sass/_tables.scss */
+#quick-search {
+  margin-top: 8px;
+}
+
+/* line 37, ../sass/_tables.scss */
+table.list td {
+  padding: 4px;
+}
+/* line 40, ../sass/_tables.scss */
+table.list input[type="checkbox"] {
+  margin-top: 6px;
+}
+/* line 44, ../sass/_tables.scss */
+table.list tbody tr.group span.count {
+  padding: 0 9px 1px 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  background-color: #999999;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  font-size: 11.844px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 14px;
+}
+/* line 54, ../sass/_tables.scss */
+table.list tbody tr:hover {
+  background-color: #EFF5F8;
+}
+/* line 58, ../sass/_tables.scss */
+table.list tr.issue a {
+  color: #666;
+}
 
 /*tr.odd {background-color: transparent;}
 tr.even {background-color: transparent;}
 table.list th {background-color: transparent;}*/
-tr.odd.priority-highest, table.list tbody tr.odd.priority-highest:hover { color: #900; font-weight: bold; }
+/* line 67, ../sass/_tables.scss */
+tr.odd.priority-highest, table.list tbody tr.odd.priority-highest:hover {
+  color: #900;
+  font-weight: bold;
+}
 
-tr.odd.priority-highest { background: #ffc4c4; }
-tr.even.priority-highest { color: #900; font-weight: bold; }
+/* line 73, ../sass/_tables.scss */
+tr.odd.priority-highest {
+  background: #ffc4c4;
+}
+/* line 76, ../sass/_tables.scss */
+tr.even.priority-highest {
+  color: #900;
+  font-weight: bold;
+}
 
-table.list tbody tr.even.priority-highest:hover { color: #900; font-weight: bold; }
+/* line 82, ../sass/_tables.scss */
+table.list tbody tr.even.priority-highest:hover {
+  color: #900;
+  font-weight: bold;
+}
 
-tr.even.priority-highest { background: #ffd4d4; }
-tr.priority-highest a, tr.priority-highest:hover a { color: #900; }
-tr.odd.priority-highest td, tr.even.priority-highest td { border-color: #ffb4b4; }
-tr.odd.priority-high2 { color: #900; }
+/* line 88, ../sass/_tables.scss */
+tr.even.priority-highest {
+  background: #ffd4d4;
+}
+/* line 92, ../sass/_tables.scss */
+tr.priority-highest a, tr.priority-highest:hover a {
+  color: #900;
+}
+/* line 96, ../sass/_tables.scss */
+tr.odd.priority-highest td, tr.even.priority-highest td {
+  border-color: #ffb4b4;
+}
+/* line 99, ../sass/_tables.scss */
+tr.odd.priority-high2 {
+  color: #900;
+}
 
-table.list tbody tr.odd.priority-high2:hover { color: #900; }
+/* line 104, ../sass/_tables.scss */
+table.list tbody tr.odd.priority-high2:hover {
+  color: #900;
+}
 
-tr.odd.priority-high2 { background: #ffc4c4; }
-tr.even.priority-high2 { color: #900; }
+/* line 109, ../sass/_tables.scss */
+tr.odd.priority-high2 {
+  background: #ffc4c4;
+}
+/* line 112, ../sass/_tables.scss */
+tr.even.priority-high2 {
+  color: #900;
+}
 
-table.list tbody tr.even.priority-high2:hover { color: #900; }
+/* line 117, ../sass/_tables.scss */
+table.list tbody tr.even.priority-high2:hover {
+  color: #900;
+}
 
-tr.even.priority-high2 { background: #ffd4d4; }
-tr.priority-high2 a { color: #900; }
-tr.odd.priority-high2 td, tr.even.priority-high2 td { border-color: #ffb4b4; }
-tr.odd.priority-high3 { color: #900; }
+/* line 122, ../sass/_tables.scss */
+tr.even.priority-high2 {
+  background: #ffd4d4;
+}
+/* line 125, ../sass/_tables.scss */
+tr.priority-high2 a {
+  color: #900;
+}
+/* line 128, ../sass/_tables.scss */
+tr.odd.priority-high2 td, tr.even.priority-high2 td {
+  border-color: #ffb4b4;
+}
+/* line 131, ../sass/_tables.scss */
+tr.odd.priority-high3 {
+  color: #900;
+}
 
-table.list tbody tr.odd.priority-high3:hover { color: #900; }
+/* line 136, ../sass/_tables.scss */
+table.list tbody tr.odd.priority-high3:hover {
+  color: #900;
+}
 
-tr.odd.priority-high3 { background: #fee; }
-tr.even.priority-high3 { color: #900; }
+/* line 141, ../sass/_tables.scss */
+tr.odd.priority-high3 {
+  background: #fee;
+}
+/* line 144, ../sass/_tables.scss */
+tr.even.priority-high3 {
+  color: #900;
+}
 
-table.list tbody tr.even.priority-high3:hover { color: #900; }
+/* line 149, ../sass/_tables.scss */
+table.list tbody tr.even.priority-high3:hover {
+  color: #900;
+}
 
-tr.even.priority-high3 { background: #fff2f2; }
-tr.priority-high3 a { color: #900; }
-tr.odd.priority-high3 td, tr.even.priority-high3 td { border-color: #fcc; }
-tr.odd.priority-lowest { color: #559; }
+/* line 154, ../sass/_tables.scss */
+tr.even.priority-high3 {
+  background: #fff2f2;
+}
+/* line 157, ../sass/_tables.scss */
+tr.priority-high3 a {
+  color: #900;
+}
+/* line 160, ../sass/_tables.scss */
+tr.odd.priority-high3 td, tr.even.priority-high3 td {
+  border-color: #fcc;
+}
+/* line 163, ../sass/_tables.scss */
+tr.odd.priority-lowest {
+  color: #559;
+}
 
-table.list tbody tr.odd.priority-lowest:hover { color: #559; }
+/* line 168, ../sass/_tables.scss */
+table.list tbody tr.odd.priority-lowest:hover {
+  color: #559;
+}
 
-tr.odd.priority-lowest { background: #eaf7ff; }
-tr.even.priority-lowest { color: #559; }
+/* line 173, ../sass/_tables.scss */
+tr.odd.priority-lowest {
+  background: #eaf7ff;
+}
+/* line 176, ../sass/_tables.scss */
+tr.even.priority-lowest {
+  color: #559;
+}
 
-table.list tbody tr.even.priority-lowest:hover { color: #559; }
+/* line 181, ../sass/_tables.scss */
+table.list tbody tr.even.priority-lowest:hover {
+  color: #559;
+}
 
-tr.even.priority-lowest { background: #f2faff; }
-tr.priority-lowest a { color: #559; }
-tr.odd.priority-lowest td, tr.even.priority-lowest td { border-color: #add7f3; }
+/* line 186, ../sass/_tables.scss */
+tr.even.priority-lowest {
+  background: #f2faff;
+}
+/* line 189, ../sass/_tables.scss */
+tr.priority-lowest a {
+  color: #559;
+}
+/* line 192, ../sass/_tables.scss */
+tr.odd.priority-lowest td, tr.even.priority-lowest td {
+  border-color: #add7f3;
+}
 
 /*input[type="button"], input[type="submit"], input[type="reset"] { background-color: #f2f2f2; color: #222222; border: 1px outset #cccccc; }
 input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover { background-color: #ccccbb; }
 */
-.button, input[type="submit"] { position: relative; display: inline-block; padding: 5px 11px; font-weight: bold; color: #333; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9); white-space: nowrap; background-color: #eaeaea; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #eaeaea)); background-image: -webkit-linear-gradient(#fafafa, #eaeaea); background-image: -moz-linear-gradient(#fafafa, #eaeaea); background-image: -o-linear-gradient(#fafafa, #eaeaea); background-image: linear-gradient(#fafafa, #eaeaea); -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; border: 1px solid #ddd; border-bottom-color: #c4c4c4; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); vertical-align: middle; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-appearance: none; }
-.button:hover, input[type="submit"]:hover { text-decoration: none; background-color: #dadada; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eaeaea), color-stop(100%, #dadada)); background-image: -webkit-linear-gradient(#eaeaea, #dadada); background-image: -moz-linear-gradient(#eaeaea, #dadada); background-image: -o-linear-gradient(#eaeaea, #dadada); background-image: linear-gradient(#eaeaea, #dadada); border-color: #cccccc #cccccc #b5b5b5; }
-.button:active, input[type="submit"]:active { background-color: #dadada; background-image: none; border-color: #b5b5b5; -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15); -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15); }
-.button:disabled, input[type="submit"]:disabled, .button:disabled:hover, input[type="submit"]:disabled:hover, .button[disabled], input[disabled][type="submit"], .button[disabled]:hover, input[disabled][type="submit"]:hover { opacity: .5; color: #666; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9); background-image: none; background-color: #e5e5e5; border-color: #c5c5c5; cursor: default; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+/* line 34, ../sass/_forms.scss */
+.button, input[type="submit"] {
+  position: relative;
+  display: inline-block;
+  padding: 5px 11px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  background-color: #eaeaea;
+  background-repeat: repeat-x;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #eaeaea));
+  background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+  background-image: -o-linear-gradient(#fafafa, #eaeaea);
+  background-image: linear-gradient(#fafafa, #eaeaea);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  border-bottom-color: #c4c4c4;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-appearance: none;
+}
+/* line 56, ../sass/_forms.scss */
+.button:hover, input[type="submit"]:hover {
+  text-decoration: none;
+  background-color: #dadada;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eaeaea), color-stop(100%, #dadada));
+  background-image: -webkit-linear-gradient(#eaeaea, #dadada);
+  background-image: -moz-linear-gradient(#eaeaea, #dadada);
+  background-image: -o-linear-gradient(#eaeaea, #dadada);
+  background-image: linear-gradient(#eaeaea, #dadada);
+  border-color: #cccccc #cccccc #b5b5b5;
+}
+/* line 63, ../sass/_forms.scss */
+.button:active, input[type="submit"]:active {
+  background-color: #dadada;
+  background-image: none;
+  border-color: #b5b5b5;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+/* line 73, ../sass/_forms.scss */
+.button:disabled, input[type="submit"]:disabled, .button:disabled:hover, input[type="submit"]:disabled:hover, .button[disabled], input[disabled][type="submit"], .button[disabled]:hover, input[disabled][type="submit"]:hover {
+  opacity: .5;
+  color: #666;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+  background-image: none;
+  background-color: #e5e5e5;
+  border-color: #c5c5c5;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 
-.btn { display: inline-block; padding: 4px 12px; margin-bottom: 0; text-align: center; vertical-align: middle; cursor: pointer; color: #333333; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); background-color: #a3a3a3; background-image: -moz-linear-gradient(top, #999999, #b3b3b3); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999999), to(#b3b3b3)); background-image: -webkit-linear-gradient(top, #999999, #b3b3b3); background-image: -o-linear-gradient(top, #999999, #b3b3b3); background-image: linear-gradient(to bottom, #999999, #b3b3b3); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF999999', endColorstr='#FFB3B3B3', GradientType=0); border-color: #b3b3b3 #b3b3b3 #8c8c8c; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #b3b3b3; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); border: 1px solid #dddddd; *border: 0; border-bottom-color: #c4c4c4; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; *margin-left: .3em; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
-.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { color: #333333; background-color: #b3b3b3; *background-color: #a6a6a6; }
-.btn:active, .btn.active { background-color: #999999 \9; }
-.btn:first-child { *margin-left: 0; }
-.btn:hover, .btn:focus { color: #333333; text-decoration: none; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -o-transition: background-position 0.1s linear; transition: background-position 0.1s linear; }
-.btn:focus { outline: thin dotted #333; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
-.btn.active, .btn:active { background-image: none; outline: 0; -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-.btn.disabled, .btn[disabled] { cursor: default; background-image: none; opacity: 0.65; filter: alpha(opacity=65); -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+/* line 85, ../sass/_forms.scss */
+.btn {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #a3a3a3;
+  background-image: -moz-linear-gradient(top, #999999, #b3b3b3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999999), to(#b3b3b3));
+  background-image: -webkit-linear-gradient(top, #999999, #b3b3b3);
+  background-image: -o-linear-gradient(top, #999999, #b3b3b3);
+  background-image: linear-gradient(to bottom, #999999, #b3b3b3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF999999', endColorstr='#FFB3B3B3', GradientType=0);
+  border-color: #b3b3b3 #b3b3b3 #8c8c8c;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #b3b3b3;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #dddddd;
+  *border: 0;
+  border-bottom-color: #c4c4c4;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 21, ../sass/_forms.scss */
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+  color: #333333;
+  background-color: #b3b3b3;
+  *background-color: #a6a6a6;
+}
+/* line 29, ../sass/_forms.scss */
+.btn:active, .btn.active {
+  background-color: #999999 \9;
+}
+/* line 61, ../sass/_mixins.scss */
+.btn:first-child {
+  *margin-left: 0;
+}
+/* line 103, ../sass/_forms.scss */
+.btn:hover, .btn:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+/* line 114, ../sass/_forms.scss */
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+/* line 120, ../sass/_forms.scss */
+.btn.active, .btn:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 128, ../sass/_forms.scss */
+.btn.disabled, .btn[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 
-input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="tel"], input[type="url"], textarea, select { outline: none; padding: 3px 4px; background-color: #fff; border: 1px solid #ccc; -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); -webkit-box-sizing: box-sizing; -moz-box-sizing: box-sizing; box-sizing: box-sizing; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-transition: all 0.15s ease-in 0; -moz-transition: all 0.15s ease-in 0; -o-transition: all 0.15s ease-in 0; transition: all 0.15s ease-in 0; vertical-align: middle; }
-#content input[type="text"], #content input[type="password"], #content input[type="email"], #content input[type="number"], #content input[type="tel"], #content input[type="url"], #content textarea, #content select { background-color: #fafafa; }
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="url"]:focus, textarea:focus, select:focus { border-color: #51a7e8; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5); }
+/* line 139, ../sass/_forms.scss */
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="tel"], input[type="url"], textarea, select {
+  outline: none;
+  padding: 3px 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  -webkit-box-sizing: box-sizing;
+  -moz-box-sizing: box-sizing;
+  box-sizing: box-sizing;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.15s ease-in 0;
+  -moz-transition: all 0.15s ease-in 0;
+  -o-transition: all 0.15s ease-in 0;
+  transition: all 0.15s ease-in 0;
+  vertical-align: middle;
+}
+/* line 150, ../sass/_forms.scss */
+#content input[type="text"], #content input[type="password"], #content input[type="email"], #content input[type="number"], #content input[type="tel"], #content input[type="url"], #content textarea, #content select {
+  background-color: #fafafa;
+}
+/* line 154, ../sass/_forms.scss */
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="url"]:focus, textarea:focus, select:focus {
+  border-color: #51a7e8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
+}
 
-input.autocomplete { padding-left: 20px; }
-input#issue_subject { width: 98%; }
+/* line 165, ../sass/_forms.scss */
+input.autocomplete {
+  padding-left: 20px;
+}
+/* line 168, ../sass/_forms.scss */
+input#issue_subject {
+  width: 98%;
+}
 
-textarea.wiki-edit { width: 98%; }
+/* line 174, ../sass/_forms.scss */
+textarea.wiki-edit {
+  width: 98%;
+}
 
-option { border-bottom: 1px dotted #ddd; }
+/* line 179, ../sass/_forms.scss */
+option {
+  border-bottom: 1px dotted #ddd;
+}
 
-.controller-messages.action-show .message { background: #EAF7FF; padding: 0px 15px 10px; border: 1px solid silver; margin: -11px -11px 15px -11px; }
-.controller-messages.action-show .message.reply { padding: 0px 10px; margin: -1px; background: white; border: 1px solid #D9D9D9; }
-.controller-messages.action-show .message .contextual { margin-top: 10px; }
+/* line 185, ../sass/_forms.scss */
+.controller-messages.action-show .message {
+  background: #EAF7FF;
+  padding: 0px 15px 10px;
+  border: 1px solid silver;
+  margin: -11px -11px 15px -11px;
+}
+/* line 186, ../sass/_forms.scss */
+.controller-messages.action-show .message.reply {
+  padding: 0px 10px;
+  margin: -1px;
+  background: white;
+  border: 1px solid #D9D9D9;
+}
+/* line 196, ../sass/_forms.scss */
+.controller-messages.action-show .message .contextual {
+  margin-top: 10px;
+}
 
-.controller-boards p.breadcrumb { position: relative; background: white; border: 0px solid; padding: 9px 13px 10px; margin: -5px -10px 1px -10px; background-position-x: 12px !important; background-position-y: 9px !important; -webkit-border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; -moz-border-radius-topright: 8px; border-top-right-radius: 8px; position: relative; border-bottom: 1px solid #AECCD7; }
+/* line 201, ../sass/_forms.scss */
+.controller-boards p.breadcrumb {
+  position: relative;
+  background: white;
+  border: 0px solid;
+  padding: 9px 13px 10px;
+  margin: -5px -10px 1px -10px;
+  background-position-x: 12px !important;
+  background-position-y: 9px !important;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+  border-bottom: 1px solid #AECCD7;
+}
 
-#add-news, #add-message, #add-document { background-color: white; position: relative; border-bottom: 1px solid #AECCD7; margin: -5px -10px 1px -10px; padding: 5px 10px 10px; -webkit-border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; -moz-border-radius-topright: 8px; border-top-right-radius: 8px; }
+/* line 215, ../sass/_forms.scss */
+#add-news, #add-message, #add-document {
+  background-color: white;
+  position: relative;
+  border-bottom: 1px solid #AECCD7;
+  margin: -5px -10px 1px -10px;
+  padding: 5px 10px 10px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
 
-#quick-search #q { outline: none; padding: 3px 5px !important; background-color: #fff; border: 1px solid #ddd; border-top: 1px solid #CDCDCD; -webkit-box-shadow: 0 1px 0 #f1f1f1, inset 0 1px 1px #e0e0e0; -moz-box-shadow: 0 1px 0 #f1f1f1, inset 0 1px 1px #e0e0e0; box-shadow: 0 1px 0 #f1f1f1, inset 0 1px 1px #e0e0e0; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; color: #333; font-size: 12px; }
+/* line 227, ../sass/_forms.scss */
+#quick-search #q {
+  outline: none;
+  padding: 3px 5px !important;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: 1px solid #CDCDCD;
+  -webkit-box-shadow: 0 1px 0 #f1f1f1, inset 0 1px 1px #e0e0e0;
+  -moz-box-shadow: 0 1px 0 #f1f1f1, inset 0 1px 1px #e0e0e0;
+  box-shadow: 0 1px 0 #f1f1f1, inset 0 1px 1px #e0e0e0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  color: #333;
+  font-size: 12px;
+}
 
-.box { background-color: #fcfcfc; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; padding: 16px; }
+/* line 387, ../sass/application.scss */
+.box {
+  background-color: #fcfcfc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 16px;
+}
 
-img.gravatar { -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); }
+/* line 393, ../sass/application.scss */
+img.gravatar {
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+}
 
-.wiki img { max-width: 100%; }
-.wiki table img { width: 100%; }
+/* line 398, ../sass/application.scss */
+.wiki img {
+  max-width: 100%;
+}
+/* line 401, ../sass/application.scss */
+.wiki table img {
+  width: 100%;
+}
 
-div.wiki pre, .wiki pre { padding: 6px 10px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+/* line 406, ../sass/application.scss */
+div.wiki pre, .wiki pre {
+  padding: 6px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 
-.controller-wiki div#content > div.contextual { margin-top: 3px; }
+/* line 411, ../sass/application.scss */
+.controller-wiki div#content > div.contextual {
+  margin-top: 3px;
+}
 
-div#content > div.wiki { padding-top: 15px; }
+/* line 415, ../sass/application.scss */
+div#content > div.wiki {
+  padding-top: 15px;
+}
 
-#projects-index ul.projects ul.projects { border-left: 3px solid #E0E0E0; }
-ul.projects.root { padding: 10px; }
-@media (min-width: 1024px) { ul.projects.root { -webkit-column-count: 3; -moz-column-count: 3; -ms-column-count: 3; -o-column-count: 3; column-count: 3; }
-  ul.projects.root li.root { border: 1px solid #DDD; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); display: inline-block; margin: 0 0 10px; padding: 5%; vertical-align: top; width: 90%; } }
-@media (min-width: 1284px) { ul.projects.root { -webkit-column-count: 4; -moz-column-count: 4; -ms-column-count: 4; -o-column-count: 4; column-count: 4; } }
-ul.projects a.project { font-weight: bold; font-size: 1.1em; }
+/* line 4, ../sass/_projects.scss */
+#projects-index ul.projects ul.projects {
+  border-left: 3px solid #E0E0E0;
+}
+/* line 9, ../sass/_projects.scss */
+ul.projects.root {
+  padding: 10px;
+}
+@media (min-width: 1024px) {
+  /* line 9, ../sass/_projects.scss */
+  ul.projects.root {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;
+  }
+  /* line 14, ../sass/_projects.scss */
+  ul.projects.root li.root {
+    border: 1px solid #DDD;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 5%;
+    vertical-align: top;
+    width: 90%;
+  }
+}
+@media (min-width: 1284px) {
+  /* line 9, ../sass/_projects.scss */
+  ul.projects.root {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    -ms-column-count: 4;
+    -o-column-count: 4;
+    column-count: 4;
+  }
+}
+/* line 31, ../sass/_projects.scss */
+ul.projects a.project {
+  font-weight: bold;
+  font-size: 1.1em;
+}
 
-div.journal .details { border: 1px solid white; }
-div.journal .details:hover { background: #FFD; border: 1px solid silver !important; }
+/* line 421, ../sass/application.scss */
+div.journal .details {
+  border: 1px solid white;
+}
+/* line 423, ../sass/application.scss */
+div.journal .details:hover {
+  background: #FFD;
+  border: 1px solid silver !important;
+}
 
-#context-menu { -webkit-box-shadow: 0 0 3px #cccccc; -moz-box-shadow: 0 0 3px #cccccc; box-shadow: 0 0 3px #cccccc; }
-#context-menu ul li ul { -webkit-box-shadow: 0 0 3px #cccccc; -moz-box-shadow: 0 0 3px #cccccc; box-shadow: 0 0 3px #cccccc; }
-#context-menu li:hover { border: 1px solid #eee !important; background-color: #eee; }
-#context-menu ul { border-top: 1px solid #DDD; border-left: 1px solid #DDD; border-bottom: 1px solid #DDD !important; border-right: 1px solid #DDD !important; }
+/* line 429, ../sass/application.scss */
+#context-menu {
+  -webkit-box-shadow: 0 0 3px #cccccc;
+  -moz-box-shadow: 0 0 3px #cccccc;
+  box-shadow: 0 0 3px #cccccc;
+}
+/* line 431, ../sass/application.scss */
+#context-menu ul li ul {
+  -webkit-box-shadow: 0 0 3px #cccccc;
+  -moz-box-shadow: 0 0 3px #cccccc;
+  box-shadow: 0 0 3px #cccccc;
+}
+/* line 434, ../sass/application.scss */
+#context-menu li:hover {
+  border: 1px solid #eee !important;
+  background-color: #eee;
+}
+/* line 438, ../sass/application.scss */
+#context-menu ul {
+  border-top: 1px solid #DDD;
+  border-left: 1px solid #DDD;
+  border-bottom: 1px solid #DDD !important;
+  border-right: 1px solid #DDD !important;
+}
 
-div.tooltip:hover span.tip { border: 1px solid #D9D9D9; zoom: 1; -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); }
+/* line 446, ../sass/application.scss */
+div.tooltip:hover span.tip {
+  border: 1px solid #D9D9D9;
+  zoom: 1;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+}
 
-table.progress td.closed { background: #AECCD7 none repeat scroll 0%; }
-table.progress td.done { background: #EAF2F5 none repeat scroll 0%; }
+/* line 453, ../sass/application.scss */
+table.progress td.closed {
+  background: #AECCD7 none repeat scroll 0%;
+}
+/* line 456, ../sass/application.scss */
+table.progress td.done {
+  background: #EAF2F5 none repeat scroll 0%;
+}
 
-#history div.journal { border-top: 1px solid #DDD; }
+/* line 461, ../sass/application.scss */
+#history div.journal {
+  border-top: 1px solid #DDD;
+}
 
 /* Modal form*/
-div.modal { -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; border: 1px solid #CCC; padding: 30px 42px; -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); }
-div.modal h3.title { background: transparent; color: inherit; }
+/* line 467, ../sass/application.scss */
+div.modal {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #CCC;
+  padding: 30px 42px;
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+/* line 468, ../sass/application.scss */
+div.modal h3.title {
+  background: transparent;
+  color: inherit;
+}
 
-#modalbg { background: white; opacity: 0.75; }
+/* line 478, ../sass/application.scss */
+#modalbg {
+  background: white;
+  opacity: 0.75;
+}
 
-body.action-login #content, body.action-login #main.nosidebar #content { background: inherit; border: 0px; box-shadow: none; }
-body.action-login #login-form table { padding: 3em; background: white; -webkit-box-shadow: 0 0 3px #cccccc; -moz-box-shadow: 0 0 3px #cccccc; box-shadow: 0 0 3px #cccccc; border: 1px solid #ddd; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+/* line 4, ../sass/_login.scss */
+body.action-login #content, body.action-login #main.nosidebar #content {
+  background: inherit;
+  border: 0px;
+  box-shadow: none;
+}
+/* line 9, ../sass/_login.scss */
+body.action-login #login-form table {
+  padding: 3em;
+  background: white;
+  -webkit-box-shadow: 0 0 3px #cccccc;
+  -moz-box-shadow: 0 0 3px #cccccc;
+  box-shadow: 0 0 3px #cccccc;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
 
-#login-form input#username, #login-form input#password { outline: none; margin: 0px; border: 1px solid #ccc; padding: 6px; font-size: 140%; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+/* line 19, ../sass/_login.scss */
+#login-form input#username, #login-form input#password {
+  outline: none;
+  margin: 0px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  font-size: 140%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
 
-.controller-account.action-login div.flash, div.wiki div.flash { -webkit-box-shadow: 0 0 3px #cccccc; -moz-box-shadow: 0 0 3px #cccccc; box-shadow: 0 0 3px #cccccc; border: 1px solid #ddd !important; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; margin: 5px; }
+/* line 29, ../sass/_login.scss */
+.controller-account.action-login div.flash, div.wiki div.flash {
+  -webkit-box-shadow: 0 0 3px #cccccc;
+  -moz-box-shadow: 0 0 3px #cccccc;
+  box-shadow: 0 0 3px #cccccc;
+  border: 1px solid #ddd !important;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin: 5px;
+}
 
-#content .tabs ul li a { -webkit-border-top-left-radius: 2px; -moz-border-radius-topleft: 2px; border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px; -moz-border-radius-topright: 2px; border-top-right-radius: 2px; line-height: 1.3em; padding: 6px 10px 6px 10px; }
+/* line 36, ../sass/_login.scss */
+#content .tabs ul li a {
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  border-top-right-radius: 2px;
+  line-height: 1.3em;
+  padding: 6px 10px 6px 10px;
+}
 
-#sidebar a.selected { background-color: transparent; color: gray; font-weight: bold; }
+/* line 43, ../sass/_login.scss */
+#sidebar a.selected {
+  background-color: transparent;
+  color: gray;
+  font-weight: bold;
+}
 
-div.filters .live_search { margin-left: 11px !important; }
+/* line 487, ../sass/application.scss */
+div.filters .live_search {
+  margin-left: 11px !important;
+}
 
-input.live_search_field { -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px; -webkit-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15); -moz-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15); box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15); outline: none; padding: 3px 10px !important; border: 1px solid #C3C3C3; }
+/* line 491, ../sass/application.scss */
+input.live_search_field {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+  outline: none;
+  padding: 3px 10px !important;
+  border: 1px solid #C3C3C3;
+}
 
-.live_search input.live_search_field { font-size: 12px !important; }
+/* line 499, ../sass/application.scss */
+.live_search input.live_search_field {
+  font-size: 12px !important;
+}
 
-label#search_overlabel { font-size: 12px !important; padding-left: 12px !important; margin-top: -3px !important; padding-right: 28px; top: 11px !important; }
+/* line 503, ../sass/application.scss */
+label#search_overlabel {
+  font-size: 12px !important;
+  padding-left: 12px !important;
+  margin-top: -3px !important;
+  padding-right: 28px;
+  top: 11px !important;
+}
 
-table.contacts.index tbody tr:hover { background-color: #EFF5F8 !important; }
-table.contacts.index tbody tr.context-menu-selection:hover { background-color: #507AAA !important; }
+/* line 512, ../sass/application.scss */
+table.contacts.index tbody tr:hover {
+  background-color: #EFF5F8 !important;
+}
+/* line 515, ../sass/application.scss */
+table.contacts.index tbody tr.context-menu-selection:hover {
+  background-color: #507AAA !important;
+}
 
-h2 span.tag { letter-spacing: 0px; top: -4px; position: relative; }
-h2 span.tag a { margin-bottom: -1px; }
+/* line 520, ../sass/application.scss */
+h2 span.tag {
+  letter-spacing: 0px;
+  top: -4px;
+  position: relative;
+}
+/* line 524, ../sass/application.scss */
+h2 span.tag a {
+  margin-bottom: -1px;
+}
 
-div.filters .live_search { letter-spacing: 0px; }
+/* line 529, ../sass/application.scss */
+div.filters .live_search {
+  letter-spacing: 0px;
+}
 
-label#search_overlabel { margin-top: -4px; }
+/* line 533, ../sass/application.scss */
+label#search_overlabel {
+  margin-top: -4px;
+}
 
-.live_search input.live_search_field { margin-top: -6px; }
+/* line 537, ../sass/application.scss */
+.live_search input.live_search_field {
+  margin-top: -6px;
+}
 
-span.tag a, span.deal-status { color: white; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25); font-size: 9px !important; line-height: 1 !important; margin: 2px 0px 2px 0px; text-decoration: none; font-weight: bold; display: inline-block; position: relative; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.25); -webkit-border-radius: 14px; -moz-border-radius: 14px; border-radius: 14px; padding: 4px 6px 4px !important; background: black url(../images/dark-overlay.png) repeat-x scroll 0 0; border: 1px solid rgba(0, 0, 0, 0.2); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); }
-span.tag a:hover { text-shadow: none; }
-span.deal-status a:hover { color: black; text-shadow: none; }
+/* line 542, ../sass/application.scss */
+span.tag a, span.deal-status {
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  font-size: 9px !important;
+  line-height: 1 !important;
+  margin: 2px 0px 2px 0px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  padding: 4px 6px 4px !important;
+  background: black url(../images/dark-overlay.png) repeat-x scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+/* line 560, ../sass/application.scss */
+span.tag a:hover {
+  text-shadow: none;
+}
+/* line 563, ../sass/application.scss */
+span.deal-status a:hover {
+  color: black;
+  text-shadow: none;
+}
 
-body.controller-contacts #content, body.controller-notes #content, body.controller-contacts_tasks #content, body.controller-contacts_duplicates #content, body.controller-sale_funel #content, body.controller-deals #content { margin-right: 340px; }
-body.controller-contacts #sidebar, body.controller-notes #sidebar, body.controller-contacts_tasks #sidebar, body.controller-contacts_duplicates #sidebar, body.controller-sale_funel #sidebar, body.controller-deals #sidebar { width: 300px !important; }
+/* line 570, ../sass/application.scss */
+body.controller-contacts #content, body.controller-notes #content, body.controller-contacts_tasks #content, body.controller-contacts_duplicates #content, body.controller-sale_funel #content, body.controller-deals #content {
+  margin-right: 340px;
+}
+/* line 573, ../sass/application.scss */
+body.controller-contacts #sidebar, body.controller-notes #sidebar, body.controller-contacts_tasks #sidebar, body.controller-contacts_duplicates #sidebar, body.controller-sale_funel #sidebar, body.controller-deals #sidebar {
+  width: 300px !important;
+}
 
-table.invoice-lines tbody tr.line-data:hover { background-color: #EFF5F8 !important; }
-table.invoice-lines th { border: 0px !important; }
+/* line 581, ../sass/application.scss */
+table.invoice-lines tbody tr.line-data:hover {
+  background-color: #EFF5F8 !important;
+}
+/* line 584, ../sass/application.scss */
+table.invoice-lines th {
+  border: 0px !important;
+}
 
-span.invoice-status.draft { background-color: #AAA !important; }
-span.invoice-status.sent { background-color: #3F8AF7 !important; }
-span.invoice-status.paid { background-color: green !important; }
+/* line 590, ../sass/application.scss */
+span.invoice-status.draft {
+  background-color: #AAA !important;
+}
+/* line 593, ../sass/application.scss */
+span.invoice-status.sent {
+  background-color: #3F8AF7 !important;
+}
+/* line 596, ../sass/application.scss */
+span.invoice-status.paid {
+  background-color: green !important;
+}
 
-div#main-menu li a.products { background: #F4786A !important; text-shadow: none; }
-div#main-menu li a.products.selected { background-color: #E5E3DE !important; color: #222; }
+/* line 1, ../sass/_store.scss */
+div#main-menu li a.products {
+  background: #F4786A !important;
+  text-shadow: none;
+}
+/* line 4, ../sass/_store.scss */
+div#main-menu li a.products.selected {
+  background-color: #E5E3DE !important;
+  color: #222;
+}
 
-a.buy-button.blue { background: #4C728A !important; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #4c728a), color-stop(100%, #749bb4)) !important; background-image: -webkit-linear-gradient(bottom, #4c728a 0%, #749bb4 100%) !important; background-image: -moz-linear-gradient(bottom, #4c728a 0%, #749bb4 100%) !important; background-image: -o-linear-gradient(bottom, #4c728a 0%, #749bb4 100%) !important; background-image: linear-gradient(bottom, #4c728a 0%, #749bb4 100%) !important; -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#749BB4', endColorstr='#4C728A')" !important; }
+/* line 10, ../sass/_store.scss */
+a.buy-button.blue {
+  background: #4C728A !important;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #4c728a), color-stop(100%, #749bb4)) !important;
+  background-image: -webkit-linear-gradient(bottom, #4c728a 0%, #749bb4 100%) !important;
+  background-image: -moz-linear-gradient(bottom, #4c728a 0%, #749bb4 100%) !important;
+  background-image: -o-linear-gradient(bottom, #4c728a 0%, #749bb4 100%) !important;
+  background-image: linear-gradient(bottom, #4c728a 0%, #749bb4 100%) !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#749BB4', endColorstr='#4C728A')" !important;
+}
 
-#picture { width: 446px !important; top: 7px; }
+/* line 16, ../sass/_store.scss */
+#picture {
+  width: 446px !important;
+  top: 7px;
+}
 
-#title h2, #buttons, #title h1 { min-width: 550px !important; }
+/* line 21, ../sass/_store.scss */
+#title h2, #buttons, #title h1 {
+  min-width: 550px !important;
+}

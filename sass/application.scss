@@ -1,9 +1,12 @@
 @import url(../../../stylesheets/application.css);
 
+$FontAwesomePath: '../plugins/Font-Awesome/font';
+@import '../plugins/Font-Awesome/scss/font-awesome';
 @import 'themeheader';
 @import 'variables';
 @import 'functions';
 @import 'mixins';
+@import 'icons';
 
 //@import 'ja';
 
