@@ -10,3 +10,22 @@
     a.rb-statistics:before  { @include icon($bar-chart + '\00a0'); }
   }
 }
+
+#main-menu {
+  li {
+    a.overview:before           { @include icon($list-alt + '\00a0'); }
+    a.activity:before           { @include icon($dashboard + '\00a0'); }
+    a.rb-master-backlogs:before { @include icon($list-ol + '\00a0'); }
+    a.rb-releases:before        { @include icon($gift + '\00a0'); }
+    a.issues:before             { @include icon($check-empty + '\00a0'); }
+    a.new-issue:before          { @include icon($edit + '\00a0'); }
+    a.gantt:before              { @include icon($tasks + '\00a0'); }
+    a.calendar:before           { @include icon($calendar + '\00a0'); }
+    a.news:before               { @include icon($bullhorn + '\00a0'); }
+    a.documents:before          { @include icon($file-alt + '\00a0'); }
+    a.wiki:before               { @include icon($pencil + '\00a0'); }
+    a.files:before              { @include icon($paper-clip + '\00a0'); }
+    a.repository:before         { @include icon($code-fork + '\00a0'); }
+    a.settings:before           { @include icon($cog + '\00a0'); }
+  }
+}

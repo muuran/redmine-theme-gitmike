@@ -2382,6 +2382,147 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   content: "\f080\00a0";
 }
 
+/* line 16, ../sass/_icons.scss */
+#main-menu li a.overview:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f022\00a0";
+}
+/* line 17, ../sass/_icons.scss */
+#main-menu li a.activity:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f0e4\00a0";
+}
+/* line 18, ../sass/_icons.scss */
+#main-menu li a.rb-master-backlogs:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f0cb\00a0";
+}
+/* line 19, ../sass/_icons.scss */
+#main-menu li a.rb-releases:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f06b\00a0";
+}
+/* line 20, ../sass/_icons.scss */
+#main-menu li a.issues:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f096\00a0";
+}
+/* line 21, ../sass/_icons.scss */
+#main-menu li a.new-issue:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f044\00a0";
+}
+/* line 22, ../sass/_icons.scss */
+#main-menu li a.gantt:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f0ae\00a0";
+}
+/* line 23, ../sass/_icons.scss */
+#main-menu li a.calendar:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f073\00a0";
+}
+/* line 24, ../sass/_icons.scss */
+#main-menu li a.news:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f0a1\00a0";
+}
+/* line 25, ../sass/_icons.scss */
+#main-menu li a.documents:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f016\00a0";
+}
+/* line 26, ../sass/_icons.scss */
+#main-menu li a.wiki:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f040\00a0";
+}
+/* line 27, ../sass/_icons.scss */
+#main-menu li a.files:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f0c6\00a0";
+}
+/* line 28, ../sass/_icons.scss */
+#main-menu li a.repository:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f126\00a0";
+}
+/* line 29, ../sass/_icons.scss */
+#main-menu li a.settings:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f013\00a0";
+}
+
 /* line 13, ../sass/application.scss */
 body {
   color: #333333;
